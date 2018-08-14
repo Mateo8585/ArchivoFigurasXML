@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="587.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="taller.no.pkg1.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <MenuBar layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Figuras">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#CrearFigura1" text="Figura 1" />
+                  <MenuItem mnemonicParsing="false" onAction="#CrearFigura2" text="Figura 2" />
+                  <MenuItem mnemonicParsing="false" onAction="#CrearFigura3" text="Figura 3" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#BorrarRapido" text="Borrar rápido" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Canvas fx:id="Lienzo" height="490.0" layoutX="-4.0" layoutY="80.0" onMouseClicked="#ColocarFigura" onMouseDragged="#BorrarCanvas" onMouseMoved="#Coordenadas" width="602.0" />
+      <ColorPicker fx:id="Colores" layoutX="195.0" layoutY="2.0" />
+      <Label layoutX="148.0" layoutY="586.0" text="Coordenadas del mouse:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="M" layoutX="325.0" layoutY="586.0" prefHeight="17.0" prefWidth="57.0">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label fx:id="D" layoutX="394.0" layoutY="586.0" prefHeight="21.0" prefWidth="57.0">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Button fx:id="Mover" layoutX="350.0" layoutY="2.0" mnemonicParsing="false" onAction="#MoverFigura1" text="Mover figura" />
+      <Polygon fx:id="TR1" fill="#1f93ff00" layoutX="99.0" layoutY="454.0" scaleX="1.5" scaleY="1.5" stroke="BLACK" strokeType="INSIDE" visible="false">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+      </Polygon>
+      <Polygon fx:id="TR2" fill="#1f93ff00" layoutX="112.0" layoutY="460.0" rotate="35.0" scaleX="1.5" scaleY="1.5" stroke="BLACK" strokeType="INSIDE" visible="false">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Polygon fx:id="TR3" fill="#1f93ff00" layoutX="85.0" layoutY="460.0" rotate="-34.8" scaleX="1.5" scaleY="1.5" stroke="BLACK" strokeType="INSIDE" visible="false">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Button layoutX="451.0" layoutY="2.0" mnemonicParsing="false" onAction="#Esconder" text="Esconder Figura" />
+    </children>
+</AnchorPane>
