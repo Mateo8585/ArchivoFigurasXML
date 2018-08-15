@@ -1,7 +1,9 @@
 
 package taller.no.pkg1;
 
+import Modelos.Figura2D;
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 import javafx.animation.PathTransition;
 import javafx.event.ActionEvent;
@@ -11,16 +13,15 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Font;
 import javafx.util.Duration;
+import javax.swing.JOptionPane;
 
-/**
- *
- * @author Mateo
- */
+
 public class FXMLDocumentController implements Initializable {
     
     @FXML
@@ -48,6 +49,23 @@ public class FXMLDocumentController implements Initializable {
     private Polygon TR3;
     
     @FXML
+    private TextField Tnombre;
+    
+    @FXML
+    private Label Nfigura;
+    
+    
+    //****************************************************************************
+    
+    
+    //Creo el linkedlist para guardar los puntos y nombres de la figura 2D
+    LinkedList<Figura2D> ListaFiguras; 
+    
+    
+    //****************************************************************************
+    
+    
+    @FXML
     private void CrearFigura1(ActionEvent event) {
        
         g = Lienzo.getGraphicsContext2D();       
@@ -70,7 +88,7 @@ public class FXMLDocumentController implements Initializable {
         double Y2[] = {215, 110, 215, 370, 350, 370};
         
         g.strokePolygon(X1, Y2, 6);
-      
+
     }
     
       @FXML
@@ -251,10 +269,75 @@ public class FXMLDocumentController implements Initializable {
         }
     }
 
+    @FXML
+    private void GuardarFiguraXML(ActionEvent event) {
+       
+   
+       Figura2D P = new Figura2D(); 
+        
+       boolean guardar = P.GuardarFigura(ListaFiguras);
+      
+    }
+    
+    
+    @FXML
+    private void AgregarFigura(ActionEvent event) {
+       
+        String nombre = Tnombre.getText();
+        
+        //Coordenadas X y Y para el polígono secundario No.1
+       
+       int x1 = 135; 
+       int x2 = 180; 
+       int x3 = 360; 
+       int x4 = 405; 
+       int x5 = 270; 
+       
+       int y1 = 310; 
+       int y2 = 140; 
+       int y3 = 140; 
+       int y4 = 310; 
+       int y5 = 350;
+      
+       //Coordenadas X y Y para el polígono secundario No.2
+       
+       int x11 = 126; 
+       int x22 = 270; 
+       int x33 = 412; 
+       int x44 = 330; 
+       int x55 = 270; 
+       int x66 = 205;
+       
+       int y11 = 215; 
+       int y22 = 110; 
+       int y33 = 215; 
+       int y44 = 370; 
+       int y55 = 350;
+       int y66 = 370;
+       
+       
+       //Método
+       if(nombre.equals("")){
+           
+           JOptionPane.showMessageDialog(null, "Escriba el nombre");
+           
+       }else{
+       
+       Figura2D F = new Figura2D(nombre, x1, x2, x3, x4, x5, y1, y2, y3, y4, y5, x11, x22, x33, x44, x55, x66, y11, y22, y33, y44, y55, y66);
+       ListaFiguras.add(F);
+       
+       JOptionPane.showMessageDialog(null, "Figura guardada");
+                       
+       }
+      
+    }
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
+        ListaFiguras = new LinkedList(); 
+        
         
     }    
     

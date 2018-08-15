@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FIGURA2D>
+  <Nombre>Tetaedro punteado</Nombre>
+  <Polígono-1>
+    <Coordenada-X1>135</Coordenada-X1>
+    <Coordenada-X2>180</Coordenada-X2>
+    <Coordenada-X3>360</Coordenada-X3>
+    <Coordenada-X4>405</Coordenada-X4>
+    <Coordenada-X5>270</Coordenada-X5>
+    <Coordenada-Y1>310</Coordenada-Y1>
+    <Coordenada-Y2>140</Coordenada-Y2>
+    <Coordenada-Y3>140</Coordenada-Y3>
+    <Coordenada-Y4>310</Coordenada-Y4>
+    <Coordenada-Y5>350</Coordenada-Y5>
+  </Polígono-1>
+  <Polígono-2>
+    <Coordenada-X1>126</Coordenada-X1>
+    <Coordenada-X2>270</Coordenada-X2>
+    <Coordenada-X3>412</Coordenada-X3>
+    <Coordenada-X4>330</Coordenada-X4>
+    <Coordenada-X5>270</Coordenada-X5>
+    <Coordenada-X5>205</Coordenada-X5>
+    <Coordenada-Y1>215</Coordenada-Y1>
+    <Coordenada-Y2>110</Coordenada-Y2>
+    <Coordenada-Y3>215</Coordenada-Y3>
+    <Coordenada-Y4>370</Coordenada-Y4>
+    <Coordenada-Y5>350</Coordenada-Y5>
+    <Coordenada-Y5>370</Coordenada-Y5>
+  </Polígono-2>
+</FIGURA2D>
