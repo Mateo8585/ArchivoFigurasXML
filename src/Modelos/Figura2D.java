@@ -324,7 +324,7 @@ public class Figura2D {
         Poligono2.addContent(new Element("Coordenada-X3").setText(x33));
         Poligono2.addContent(new Element("Coordenada-X4").setText(x44));
         Poligono2.addContent(new Element("Coordenada-X5").setText(x55));
-        Poligono2.addContent(new Element("Coordenada-X5").setText(x66));
+        Poligono2.addContent(new Element("Coordenada-X6").setText(x66));
         
         //Conversión de los valores de tipo entero a cadena
         String y11 = Integer.toString(ListaFigura.get(0).getY11());
@@ -339,11 +339,12 @@ public class Figura2D {
         Poligono2.addContent(new Element("Coordenada-Y3").setText(y33));
         Poligono2.addContent(new Element("Coordenada-Y4").setText(y44));
         Poligono2.addContent(new Element("Coordenada-Y5").setText(y55));
-        Poligono2.addContent(new Element("Coordenada-Y5").setText(y66));
+        Poligono2.addContent(new Element("Coordenada-Y6").setText(y66));
              
         //***********************************************************************************************************************************
         
-        //Se envía las etiquetas al documento de XML
+        //Se establece los elementos raices principales que contendra el archivo XML en el documento. 
+        //Asimismo, incluye los elementos hijos en conjunto con el contenido de cada elemento raíz
         doc.getRootElement().addContent(Nombre);
         doc.getRootElement().addContent(Poligono1);
         doc.getRootElement().addContent(Poligono2);
